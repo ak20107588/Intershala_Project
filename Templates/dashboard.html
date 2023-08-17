@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .user-details {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .user-details img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .user-details h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="user-details">
+        <h3 class="text-info text-center">Patient Details</h3>
+        <div class="text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/1430/1430504.png" class="w-50 h-50" alt="User Profile">
+        </div>
+        <h2 class="text-center">{{Result.FirstName}} {{Result.LastName}}</h2>
+        <p><strong>Email:</strong> {{Result.Email}}</p>
+        <p><strong>Role:</strong> {{Result.UserType}}</p>
+        <p><strong>Address:</strong> {{Result.Address}}</p>
+        <p><strong>Password:</strong>{{Result.Password}} </p>
+
+        <a class="btn btn-danger float-right" href="/logout">Logout</a>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
