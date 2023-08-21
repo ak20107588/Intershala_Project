@@ -30,7 +30,8 @@
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="signup">
-                        <form method="post" action="signup">
+                        <form method="post" action="signup" enctype="multipart/form-data">
+                            {% include 'messages.html' %} 
                             {% csrf_token %}
                             <div class="form-group">                               
                                 <input type="text" class="form-control" id="signup-firstname" name="firstname" placeholder="First Name" required>
@@ -103,11 +104,12 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-block">Signup</button>
-                            {% include 'messages.html' %} 
+                            
                         </form>
                     </div>
                     <div class="tab-pane fade" id="login">
                         <form method="post" action="login_detail">
+                            {% include 'messages.html' %} 
                             {% csrf_token %}
                             <div class="form-group">
                                 <label for="login-email">Email</label>
@@ -118,7 +120,7 @@
                                 <input type="password" class="form-control" id="login-password" name="password" required>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
-                            {% include 'messages.html' %} 
+                            
                         </form>
                     </div>
                 </div>

@@ -127,8 +127,8 @@ STATIC_URL = '/static/'
 
 
 # Base url to serve media files  
-MEDIA_URL = '/media/'  
-  
+MEDIA_URL = '/profilepicture/'  
+# MEDIA_URL = '/blogfile/'
 # Path where media is stored  
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
@@ -141,3 +141,8 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+SESSION_COOKIE_AGE = 600 # 10 minutes in seconds
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_EXPIRED = 'Your session has expired. Please log in again.'
